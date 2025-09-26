@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@dao": ["dao"],
+      "@dao/*": ["dao/*"],
+      "@dao/routes": ["dao/routes"],
+      "@dao/routes/*": ["dao/routes/*"],
+      "@dao/pages": ["dao/pages"],
+      "@dao/pages/*": ["dao/pages/*"],
+      "@dao/hooks": ["dao/hooks"],
+      "@dao/hooks/*": ["dao/hooks/*"],
+      "@dao/services": ["dao/services"],
+      "@dao/services/*": ["dao/services/*"],
+      "@dex": ["dex"],
+      "@dex/*": ["dex/*"],
+      "@dex/components": ["dex/components"],
+      "@dex/components/*": ["dex/components/*"],
+      "@dex/context": ["dex/context"],
+      "@dex/context/*": ["dex/context/*"],
+      "@dex/hooks": ["dex/hooks"],
+      "@dex/hooks/*": ["dex/hooks/*"],
+      "@dex/layouts": ["dex/layouts"],
+      "@dex/layouts/*": ["dex/layouts/*"],
+      "@dex/pages": ["dex/pages"],
+      "@dex/pages/*": ["dex/pages/*"],
+      "@dex/services": ["dex/services"],
+      "@dex/services/*": ["dex/services/*"],
+      "@dex/store": ["dex/store"],
+      "@dex/store/*": ["dex/store/*"],
+      "@dex/routes": ["dex/routes"],
+      "@dex/routes/*": ["dex/routes/*"],
+      "@dex/utils": ["dex/utils"],
+      "@dex/utils/*": ["dex/utils/*"],
+      "@shared/ui-kit": ["shared/ui-kit"],
+      "@shared/ui-kit/*": ["shared/ui-kit/*"],
+      "@shared/services": ["shared/services"],
+      "@shared/services/*": ["shared/services/*"],
+      "@shared/utils": ["shared/utils"],
+      "@shared/utils/*": ["shared/utils/*"]
+    }
+  }
+}
