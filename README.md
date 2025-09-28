@@ -10,7 +10,3 @@ Lyra Union DAO is a decentralized platform for creating and managing Decentraliz
   - **NFT DAOs**: Where voting power is determined by ownership of specific NFTs.
 - **DAO Management**: A dashboard to manage DAO proposals, voting, and membership.
 - **Decentralized Exchange (DEX)**: A built-in DEX for swapping tokens and providing liquidity.
-
-## License
-
-This project is licensed under the terms of the LICENSE file.
