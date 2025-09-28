@@ -4,6 +4,7 @@ import { useDexContext } from "@dex/hooks";
 import { Color, HashDaoLogo, WalletConnection, Text } from "@shared/ui-kit";
 import { isMobile } from "react-device-detect";
 import { useEffect, useState } from "react";
+import logo from '/Lyra-logo.png'
 
 export interface TopMenuBarProps {
   menuOptions: Array<string>;
@@ -31,7 +32,9 @@ export function TopMenuBar(props: TopMenuBarProps): JSX.Element {
           <Flex direction="row" gap="2" alignItems="center">
             {/* <HashDaoIcon boxSize="10" />
             <Tag label="HashDAO" />*/}
-            <HashDaoLogo width="60%" height="100%" />
+            {/*<HashDaoLogo width="60%" height="100%" />*/}
+            <img src={logo} height={64} width={64} />
+            <h2><b>Lyra Union</b></h2>
           </Flex>
           <Alert variant="">
             {reconnectionInProgress && (

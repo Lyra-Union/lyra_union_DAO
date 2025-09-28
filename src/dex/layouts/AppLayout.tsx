@@ -12,7 +12,7 @@ export function AppLayout(props: AppLayoutProps) {
   const { navOptions } = props;
   useWalletConnection();
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <TopMenuBar menuOptions={navOptions} />
       <Container layerStyle="body">
@@ -21,6 +21,6 @@ export function AppLayout(props: AppLayoutProps) {
         </Flex>
       </Container>
       <PageFooter />
-    </>
+    </div>
   );
 }
