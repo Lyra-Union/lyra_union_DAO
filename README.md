@@ -1,102 +1,53 @@
-<div align="center">
-  <h1>
-    Hedera DeFi UI Accelerator
-  </h1>
-</div>
-  
-<ul>
-  <li><b><a href="https://dao.web3nomad.org/">DAO-as-a-Service (Testnet)</a></b></li>
-  <li><b><a href="https://hashiodao.swirldslabs.com/">DAO-as-a-Service (Mainnet)</a></b></li>
-</ul>
+# Lyra Union DAO
 
-<hr />
+Lyra Union DAO is a decentralized platform for creating and managing Decentralized Autonomous Organizations (DAOs) on the Hedera Hashgraph network. It provides a suite of tools for governance, treasury management, and a Decentralized Exchange (DEX).
 
+## Features
 
-## Status: **POC**
-The DEX component is not active. 
+- **DAO Creation**: Easily create and customize your own DAO.
+  - **Multi-Sig DAOs**: For groups that require multiple parties to sign transactions.
+  - **Governance Token DAOs**: Where voting power is based on the amount of governance tokens held.
+  - **NFT DAOs**: Where voting power is determined by ownership of specific NFTs.
+- **DAO Management**: A dashboard to manage DAO proposals, voting, and membership.
+- **Decentralized Exchange (DEX)**: A built-in DEX for swapping tokens and providing liquidity.
 
-## Table of Contents
+## Project Structure
 
-- [Installation](#installation)
-- [Setup Local Environment](#setup-local-environment)
-- [Usage](#usage)
+The codebase is organized into modules:
 
-## Installation
+- `src/dao`: Core logic for DAO functionalities.
+- `src/dex`: Components and services for the Decentralized Exchange.
+- `src/shared`: Shared components, services, and utilities.
 
-Install dependencies with yarn.
+## Getting Started
 
-```
-yarn install
-```
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/lyra-union/dao-dex-app.git
+    cd dao-dex-app
+    ```
 
-## Setup Local Environment 
+2.  **Install dependencies:**
+    ```bash
+    yarn install
+    ```
 
-### Setup HTTPS for Local Wallet Pairing
+3.  **Run the application:**
+    ```bash
+    yarn dev
+    ```
 
-The Hedera DeFi Accelerator apps utilize the [hashconnect](https://github.com/Hashpack/hashconnect) library to pair with supported wallet extensions. Currently, the only supported wallet extension is [HashPack](https://www.hashpack.app/). The HashConnect 1-click pairing feature only works in an SSL secured environment (**https** URLs). To enable `HTTPS` in your local build:
+## Technologies
 
-1. Create an `.env` file in the root of this project.
-2. In the `.env` file set the `HTTPS` environment variable to `true`. 
+- **Blockchain**: Hedera Hashgraph
+- **Frontend**: React, TypeScript, Vite
+- **State Management**: Redux Toolkit
+- **Smart Contracts**: Solidity (via JSON ABI files)
 
-```
-/* .env */
-HTTPS=true
-```
+## Contributing
 
-3. Create an SSL certificate. There are several tools that can be used to generate a certificate and key. An easy way to do this is to use the [mkcert](https://github.com/FiloSottile/mkcert) tool.
+Contributions are welcome. Please read our contributing guidelines before submitting a pull request.
 
-```
-# The [Homebrew](https://brew.sh/) macOS package manager is used for this example
+## License
 
-# Install mkcert tool
-brew install mkcert
-
-# Install nss (only needed if you use Firefox)
-brew install nss
-
-# Setup mkcert on your machine (creates a CA)
-mkcert -install
-
-# Create a directory to store the certificate and key
-mkdir -p .cert
-
-# Generate the certificate (ran from the root of this project)
-mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem "localhost"
-```
-
-4. Set the `SSL_CRT_FILE` and `SSL_CRT_FILE` environment variables to the path of the certificate and key files.
-
-```
-/* .env */
-HTTPS=true
-
-/* Path to certificate */
-SSL_CRT_FILE=./.cert/cert.pem
-
-/* Path to key */
-SSL_KEY_FILE=./.cert/key.pem
-```
-
-5. Make sure to include `.env` and `.cert` in your `.gitignore` file so this information is not committed to version control.
-
-6. Run the application with `vercel dev` (see [Usage](#usage) for Vercel installation). You should see `https://` prefixed to the localhost URL.
-
-### Setup Pinata Environment variables to use the Pinata IPFS API
-
-The DeFi apps store and retrieve  IPFS data using Pinata. A Pinata public key, secret key, and gateway URL are necessary for IPFS pinning and fetching features to work as intended. You will need to create a Pinata account to create a new set of keys and a gateway URL. A more comprehensive tutorial can be found in the [Pinata API Docs](https://docs.pinata.cloud/docs/welcome-to-pinata).
-
-```
-PRIVATE_PINATA_API_KEY=/** Public Key **/
-PRIVATE_PINATA_API_SECRET_KEY=/** Secret Key **/
-VITE_PUBLIC_PINATA_GATEWAY_URL=/** Gateway URL **/
-```
-
-## Usage
-
-The DeFi apps utilize [Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions) to communicate with third-party APIs such as IPFS. You will need to install the [Vercel CLI](https://vercel.com/docs/cli) to run the applications.
-
-### Run The Application
-
-```
-vercel dev
-```
+This project is licensed under the terms of the LICENSE file.
